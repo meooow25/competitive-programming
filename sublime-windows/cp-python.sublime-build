@@ -1,0 +1,17 @@
+{
+    "cmd": ["echo", "Running...", "&&", "start", "cmd", "/K", "python ${file} && pause && exit"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "working_dir": "${file_path}",
+    "selector": "source.python",
+    "shell": true,
+    "variants":  [
+        {
+            "name": "Run with input",
+            "cmd": ["echo", "Running...", "&&", "start", "cmd", "/K", "python ${file} < i.txt && pause && exit"]
+        },
+        {
+            "name": "Run with input and output",
+            "cmd": ["echo", "Running...", "&&", "start", "cmd", "/C", "python ${file} < i.txt > o.txt && exit"]
+        },
+    ]
+}
