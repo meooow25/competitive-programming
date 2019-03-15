@@ -38,8 +38,8 @@ struct matrix {
         matrix res = identity(m.size()), a = *this;
         while (x) {
             if (x & 1) res = res * a;
-            a = a * a;
             x >>= 1;
+            if (x) a = a * a;
         }
         return res;
     }
