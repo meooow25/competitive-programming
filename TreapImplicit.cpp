@@ -1,7 +1,8 @@
-
 // Basic implicit treap template
 // Refs: https://cp-algorithms.com/data_structures/treap.html
 //       https://en.wikipedia.org/wiki/Treap
+
+// TODO: Update this to be similar to Treap.cpp
 
 namespace ImplicitTreap {
     const int POOL_SZ = 5e6;
