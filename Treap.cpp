@@ -31,8 +31,10 @@ namespace Treap {
     inline void update(int idx) { if (idx) P[idx].sz = getsz(P[idx].lt) + 1 + getsz(P[idx].rt); }
 
     void merge(int lt, int rt, int &idx) {
-        if (!lt) idx = rt;
-        else if (!rt) idx = lt;
+        if (!lt)
+            idx = rt;
+        else if (!rt)
+            idx = lt;
         else if (P[lt].prio > P[rt].prio)
             merge(P[lt].rt, rt, P[lt].rt), idx = lt;
         else
